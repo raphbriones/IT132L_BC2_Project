@@ -40,5 +40,12 @@ namespace Dental_Clinic_System
             schedule.Show();
             this.Hide();
         }
+
+        private void StockBtn_Click(object sender, EventArgs e)
+        {
+            Stock medstock = new Stock();
+            medstock.Show();
+            this.Hide();
+        }
     }
 }

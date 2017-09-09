@@ -100,6 +100,7 @@
             this.StockBtn.TabIndex = 12;
             this.StockBtn.Text = "Stock";
             this.StockBtn.UseVisualStyleBackColor = true;
+            this.StockBtn.Click += new System.EventHandler(this.StockBtn_Click);
             // 
             // PatientBtn
             // 
