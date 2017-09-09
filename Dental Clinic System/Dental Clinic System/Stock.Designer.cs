@@ -49,10 +49,10 @@
             this.ExpirationDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(249, 453);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label2
             // 
@@ -94,6 +95,7 @@
             this.PaymentHistoryBtn.TabIndex = 13;
             this.PaymentHistoryBtn.Text = "Payment History";
             this.PaymentHistoryBtn.UseVisualStyleBackColor = true;
+            this.PaymentHistoryBtn.Click += new System.EventHandler(this.PaymentHistoryBtn_Click);
             // 
             // ScheduleBtn
             // 
@@ -180,6 +182,7 @@
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // ItemNo
             // 
@@ -223,12 +226,19 @@
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.Maroon;
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.Search);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(256, 1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(478, 72);
             this.panel2.TabIndex = 4;
+            // 
+            // Search
+            // 
+            this.Search.Location = new System.Drawing.Point(295, 16);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(144, 20);
+            this.Search.TabIndex = 3;
             // 
             // label1
             // 
@@ -244,12 +254,9 @@
             this.label1.Text = "MEDICINE STOCK";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // timer1
             // 
-            this.textBox1.Location = new System.Drawing.Point(295, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 20);
-            this.textBox1.TabIndex = 3;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // button1
             // 
@@ -260,10 +267,7 @@
             this.button1.Size = new System.Drawing.Size(28, 23);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Stock
             // 
@@ -312,7 +316,7 @@
         private System.Windows.Forms.ColumnHeader ExpirationDate;
         private System.Windows.Forms.ColumnHeader Status;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Search;
         private System.Windows.Forms.Timer timer1;
     }
 }

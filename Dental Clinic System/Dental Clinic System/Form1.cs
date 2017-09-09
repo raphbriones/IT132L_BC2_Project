@@ -12,9 +12,9 @@ namespace Dental_Clinic_System
 {
     public partial class Form1 : Form
     {
-        
-         SqlConnection connection = new SqlConnection(@"Data Source=ASUS-PC\SQLEXPRESS01;Initial Catalog=IT132L;Integrated Security=True");
-        
+      
+        SqlConnection connection = new SqlConnection(@"Data Source=ASUS-PC\SQLEXPRESS01;Initial Catalog=IT132L;Integrated Security=True");
+        string date;
         public Form1()
         {
             InitializeComponent();
@@ -33,11 +33,11 @@ namespace Dental_Clinic_System
             MonthCmbBox.Text = monthCalendar1.TodayDate.Month.ToString();
             DayCmbBox.Text = monthCalendar1.TodayDate.Day.ToString();
             YearCmbBox.Text = monthCalendar1.TodayDate.Year.ToString();
-
+            connection.Close();
             connection.Open();
 
         
-            SqlCommand cmd = new SqlCommand("update ScheduleTable Set status = 'missed' where date <= '" + monthCalendar1.TodayDate.Month.ToString() + "/" + monthCalendar1.TodayDate.Day.ToString() + "/" + monthCalendar1.TodayDate.Year.ToString() + "' and  status !='Completed' ", connection);
+            SqlCommand cmd = new SqlCommand("update ScheduleTable Set status = 'missed' where date < '" + monthCalendar1.TodayDate.Month.ToString() + "/" + monthCalendar1.TodayDate.Day.ToString() + "/" + monthCalendar1.TodayDate.Year.ToString() + "' and  status !='Completed' ", connection);
 
             cmd.ExecuteNonQuery();
             connection.Close();
@@ -45,13 +45,14 @@ namespace Dental_Clinic_System
 
             
             connection.Open();
-            //where Date = '" + MonthCmbBox.Text + "/" + DayCmbBox.Text + "/" + YearCmbBox.Text + "'
+           
 
-            SqlDataAdapter sda = new SqlDataAdapter("select *from ScheduleTable  ", connection);
+            SqlDataAdapter sda = new SqlDataAdapter("select *from ScheduleTable where Date = '" + MonthCmbBox.Text + "/" + DayCmbBox.Text + "/" + YearCmbBox.Text + "' ", connection);
             DataTable dt = new DataTable();
             sda.Fill(dt);
 
             ListViewItem lvi = new ListViewItem();
+            listView1.Items.Clear();
             listView1.BeginUpdate();
             for (int row = 0; row < dt.Rows.Count; row++)
             {
@@ -117,6 +118,120 @@ namespace Dental_Clinic_System
         {
             Stock medstock = new Stock();
             medstock.Show();
+            this.Hide();
+        }
+
+        private void MonthCmbBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            connection.Open();
+            //where Date = '" + MonthCmbBox.Text + "/" + DayCmbBox.Text + "/" + YearCmbBox.Text + "'
+            date = MonthCmbBox.Text + "/" + DayCmbBox.Text + "/" + YearCmbBox.Text;
+            if (MonthCmbBox.Text != "" && DayCmbBox.Text != "" && YearCmbBox.Text != "")
+            {
+         
+                SqlDataAdapter sda = new SqlDataAdapter("select *from ScheduleTable where date = '" + date + "'", connection);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                ListViewItem lvi = new ListViewItem();
+                listView1.Items.Clear();
+                listView1.BeginUpdate();
+                for (int row = 0; row < dt.Rows.Count; row++)
+                {
+                    DataRow dr = dt.Rows[row];
+                    ListViewItem listitem = new ListViewItem(dr["PatientName"].ToString());
+                    listitem.SubItems.Add(dr["Date"].ToString());
+                    listitem.SubItems.Add(dr["Time"].ToString());
+                    listitem.SubItems.Add(dr["Status"].ToString());
+                    listView1.Items.Add(listitem);
+
+
+                }
+                listView1.EndUpdate();
+
+
+
+
+
+                connection.Close();
+
+            }
+        }
+
+        private void DayCmbBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            date = MonthCmbBox.Text + "/" + DayCmbBox.Text + "/" + YearCmbBox.Text;
+            if (MonthCmbBox.Text != "" && DayCmbBox.Text != "" && YearCmbBox.Text != "")
+            {
+               
+                SqlDataAdapter sda = new SqlDataAdapter("select *from ScheduleTable where date = '" + date + "'", connection);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                ListViewItem lvi = new ListViewItem();
+                listView1.Items.Clear();
+                listView1.BeginUpdate();
+                for (int row = 0; row < dt.Rows.Count; row++)
+                {
+                    DataRow dr = dt.Rows[row];
+                    ListViewItem listitem = new ListViewItem(dr["PatientName"].ToString());
+                    listitem.SubItems.Add(dr["Date"].ToString());
+                    listitem.SubItems.Add(dr["Time"].ToString());
+                    listitem.SubItems.Add(dr["Status"].ToString());
+                    listView1.Items.Add(listitem);
+
+
+                }
+                listView1.EndUpdate();
+
+
+
+
+
+                connection.Close();
+
+            }
+        }
+
+        private void YearCmbBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            date = MonthCmbBox.Text + "/" + DayCmbBox.Text + "/" + YearCmbBox.Text;
+            if (MonthCmbBox.Text != "" && DayCmbBox.Text != "" && YearCmbBox.Text != "")
+            {
+
+                SqlDataAdapter sda = new SqlDataAdapter("select *from ScheduleTable where date = '" + date + "'", connection);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                ListViewItem lvi = new ListViewItem();
+                listView1.Items.Clear();
+                listView1.BeginUpdate();
+                for (int row = 0; row < dt.Rows.Count; row++)
+                {
+                    DataRow dr = dt.Rows[row];
+                    ListViewItem listitem = new ListViewItem(dr["PatientName"].ToString());
+                    listitem.SubItems.Add(dr["Date"].ToString());
+                    listitem.SubItems.Add(dr["Time"].ToString());
+                    listitem.SubItems.Add(dr["Status"].ToString());
+                    listView1.Items.Add(listitem);
+
+
+                }
+                listView1.EndUpdate();
+
+
+
+
+
+                connection.Close();
+
+            }
+        }
+
+        private void PaymentHistoryBtn_Click(object sender, EventArgs e)
+        {
+            Payment_History pay = new Payment_History();
+            pay.Show();
             this.Hide();
         }
     }
