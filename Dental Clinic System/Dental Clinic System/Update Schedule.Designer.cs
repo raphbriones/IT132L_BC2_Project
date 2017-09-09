@@ -64,6 +64,7 @@
             this.PatientName.Name = "PatientName";
             this.PatientName.Size = new System.Drawing.Size(166, 21);
             this.PatientName.TabIndex = 2;
+            this.PatientName.SelectedIndexChanged += new System.EventHandler(this.PatientName_SelectedIndexChanged);
             // 
             // Date
             // 
@@ -72,6 +73,7 @@
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(166, 21);
             this.Date.TabIndex = 3;
+            this.Date.SelectedIndexChanged += new System.EventHandler(this.Date_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -93,6 +95,7 @@
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(166, 21);
             this.Status.TabIndex = 5;
+            this.Status.SelectedIndexChanged += new System.EventHandler(this.Status_SelectedIndexChanged);
             // 
             // CancelBtn
             // 
@@ -122,6 +125,7 @@
             this.ConfirmBtn.TabIndex = 8;
             this.ConfirmBtn.Text = "Confirm";
             this.ConfirmBtn.UseVisualStyleBackColor = true;
+            this.ConfirmBtn.Click += new System.EventHandler(this.ConfirmBtn_Click);
             // 
             // Update_Schedule
             // 
@@ -142,6 +146,7 @@
             this.Name = "Update_Schedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update_Schedule";
+            this.Load += new System.EventHandler(this.Update_Schedule_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

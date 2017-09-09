@@ -53,6 +53,7 @@
             this.ConfirmBtn.TabIndex = 0;
             this.ConfirmBtn.Text = "Confirm";
             this.ConfirmBtn.UseVisualStyleBackColor = true;
+            this.ConfirmBtn.Click += new System.EventHandler(this.ConfirmBtn_Click);
             // 
             // label1
             // 
@@ -114,9 +115,11 @@
             this.PatientName.Name = "PatientName";
             this.PatientName.Size = new System.Drawing.Size(179, 20);
             this.PatientName.TabIndex = 7;
+            this.PatientName.TextChanged += new System.EventHandler(this.PatientName_TextChanged);
             // 
             // Month
             // 
+            this.Month.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Month.FormattingEnabled = true;
             this.Month.Items.AddRange(new object[] {
             "1",
@@ -135,9 +138,11 @@
             this.Month.Name = "Month";
             this.Month.Size = new System.Drawing.Size(179, 21);
             this.Month.TabIndex = 8;
+            this.Month.SelectedIndexChanged += new System.EventHandler(this.Month_SelectedIndexChanged);
             // 
             // Day
             // 
+            this.Day.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Day.FormattingEnabled = true;
             this.Day.Items.AddRange(new object[] {
             "1",
@@ -175,9 +180,11 @@
             this.Day.Name = "Day";
             this.Day.Size = new System.Drawing.Size(179, 21);
             this.Day.TabIndex = 9;
+            this.Day.SelectedIndexChanged += new System.EventHandler(this.Day_SelectedIndexChanged);
             // 
             // Year
             // 
+            this.Year.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Year.FormattingEnabled = true;
             this.Year.Items.AddRange(new object[] {
             "2015",
@@ -200,9 +207,11 @@
             this.Year.Name = "Year";
             this.Year.Size = new System.Drawing.Size(179, 21);
             this.Year.TabIndex = 10;
+            this.Year.SelectedIndexChanged += new System.EventHandler(this.Year_SelectedIndexChanged);
             // 
             // Hour
             // 
+            this.Hour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Hour.FormattingEnabled = true;
             this.Hour.Items.AddRange(new object[] {
             "0",
@@ -233,9 +242,11 @@
             this.Hour.Name = "Hour";
             this.Hour.Size = new System.Drawing.Size(179, 21);
             this.Hour.TabIndex = 11;
+            this.Hour.SelectedIndexChanged += new System.EventHandler(this.Hour_SelectedIndexChanged);
             // 
             // Minute
             // 
+            this.Minute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Minute.FormattingEnabled = true;
             this.Minute.Items.AddRange(new object[] {
             "0",
@@ -349,6 +360,7 @@
             this.Name = "Add_Schedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Schedule";
+            this.Load += new System.EventHandler(this.Add_Schedule_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

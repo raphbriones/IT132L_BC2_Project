@@ -73,22 +73,27 @@
             this.PatientName.Name = "PatientName";
             this.PatientName.Size = new System.Drawing.Size(170, 21);
             this.PatientName.TabIndex = 3;
+            this.PatientName.SelectedIndexChanged += new System.EventHandler(this.PatientName_SelectedIndexChanged);
             // 
             // Date
             // 
+            this.Date.Enabled = false;
             this.Date.FormattingEnabled = true;
             this.Date.Location = new System.Drawing.Point(102, 43);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(170, 21);
             this.Date.TabIndex = 4;
+            this.Date.SelectedIndexChanged += new System.EventHandler(this.Date_SelectedIndexChanged);
             // 
             // Time
             // 
+            this.Time.Enabled = false;
             this.Time.FormattingEnabled = true;
             this.Time.Location = new System.Drawing.Point(102, 72);
             this.Time.Name = "Time";
             this.Time.Size = new System.Drawing.Size(170, 21);
             this.Time.TabIndex = 5;
+            this.Time.SelectedIndexChanged += new System.EventHandler(this.Time_SelectedIndexChanged);
             // 
             // CancelBtn
             // 
@@ -108,6 +113,7 @@
             this.ConfirmBtn.TabIndex = 7;
             this.ConfirmBtn.Text = "Confirm";
             this.ConfirmBtn.UseVisualStyleBackColor = true;
+            this.ConfirmBtn.Click += new System.EventHandler(this.ConfirmBtn_Click);
             // 
             // ClearBtn
             // 
@@ -138,6 +144,7 @@
             this.Name = "Remove_Schedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Remove_Schedule";
+            this.Load += new System.EventHandler(this.Remove_Schedule_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

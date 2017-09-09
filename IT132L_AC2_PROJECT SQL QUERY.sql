@@ -1,4 +1,5 @@
 create database IT132L;
+use IT132L;
 
 create table ScheduleTable (PatientName varchar(50) primary key, Date date, Time varchar(50), 
  Status varchar(50));
@@ -31,3 +32,6 @@ drop table TreatmentHistoryTable;
 drop table ContactInformationTable;
 drop table StockTable;
 drop table PaymentTable;
+
+
+insert into ScheduleTable values('Renzel00','09/08/17','18:00','Pending')
