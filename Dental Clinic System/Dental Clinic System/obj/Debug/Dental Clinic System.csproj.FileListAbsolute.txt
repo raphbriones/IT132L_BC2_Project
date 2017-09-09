@@ -1,0 +1,31 @@
+C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\bin\Debug\Dental Clinic System.exe.config
+C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\bin\Debug\Dental Clinic System.exe
+C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\bin\Debug\Dental Clinic System.pdb
+C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\obj\Debug\Dental Clinic System.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Form1.resources
+C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Properties.Resources.resources
+C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\obj\Debug\Dental Clinic System.csproj.GenerateResource.Cache
+C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\obj\Debug\Dental Clinic System.exe
+C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\obj\Debug\Dental Clinic System.pdb
+C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Add_Schedule.resources
+C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Remove_Schedule.resources
+C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Update_Schedule.resources
+C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Patient.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\bin\Debug\Dental Clinic System.exe.config
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental Clinic System.exe
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental Clinic System.pdb
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental Clinic System.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Add_Schedule.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Form1.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Patient.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Properties.Resources.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Remove_Schedule.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Update_Schedule.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental Clinic System.csproj.GenerateResource.Cache
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\bin\Debug\Dental Clinic System.exe
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\bin\Debug\Dental Clinic System.pdb
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.test.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Stock.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Add_Medicine.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Remove_Medicine.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Update_Medicine.resources

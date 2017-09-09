@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IT132L_Project.Properties
+namespace Dental_Clinic_System.Properties
 {
 
 

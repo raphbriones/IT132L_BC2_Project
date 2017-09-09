@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IT132L_Project
+namespace Dental_Clinic_System
 {
     static class Program
     {
