@@ -14,7 +14,6 @@ C:\Users\ASUS\Desktop\Dental Clinic System\Dental Clinic System\obj\Debug\Dental
 C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\bin\Debug\Dental Clinic System.exe.config
 C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental Clinic System.exe
 C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental Clinic System.pdb
-C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental Clinic System.csprojResolveAssemblyReference.cache
 C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Add_Schedule.resources
 C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Form1.resources
 C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Patient.resources
@@ -29,3 +28,12 @@ C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Cl
 C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Add_Medicine.resources
 C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Remove_Medicine.resources
 C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Update_Medicine.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Add_Patient.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Remove_Patient.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.View_Detailed_Patient.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental Clinic System.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Edit_Contact_Info.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Add_Treatment.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Edit_Treatment.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Payment_History.resources
+C:\Users\ASUS\Documents\GitHub\IT132L_BC2_Project\Dental Clinic System\Dental Clinic System\obj\Debug\Dental_Clinic_System.Add_Transaction.resources

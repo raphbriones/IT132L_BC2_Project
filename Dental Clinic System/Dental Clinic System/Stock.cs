@@ -98,5 +98,101 @@ namespace Dental_Clinic_System
             update.Show();
             this.Hide();
         }
-    }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            SqlCommand c1 = new SqlCommand("Select *from  StockTable where GenericName = '" + Search.Text + "'", connection);
+            SqlDataReader r1 = c1.ExecuteReader();
+            if (r1.HasRows)
+            {
+                connection.Close();
+
+                connection.Open();
+              
+
+                SqlDataAdapter sda = new SqlDataAdapter("Select *from  StockTable where GenericName = '" + Search.Text + "'", connection);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                ListViewItem lvi = new ListViewItem();
+                listView1.Items.Clear();
+                listView1.BeginUpdate();
+                for (int row = 0; row < dt.Rows.Count; row++)
+                {
+                    DataRow dr = dt.Rows[row];
+                    ListViewItem listitem = new ListViewItem(dr["ItemNo"].ToString());
+                    listitem.SubItems.Add(dr["MedicalName"].ToString());
+                    listitem.SubItems.Add(dr["GenericName"].ToString());
+                    listitem.SubItems.Add(dr["Size"].ToString());
+                    listitem.SubItems.Add(dr["AmountInStock"].ToString());
+                    listitem.SubItems.Add(dr["Price"].ToString());
+                    listitem.SubItems.Add(dr["ExpirationDate"].ToString());
+                    listitem.SubItems.Add(dr["Status"].ToString());
+                    listView1.Items.Add(listitem);
+                }
+                listView1.EndUpdate();
+                connection.Close();
+            }
+            else
+            {
+                connection.Close();
+                connection.Open();
+                SqlCommand c2 = new SqlCommand("Select *from  StockTable where MedicalName = '" + Search.Text + "'", connection);
+                SqlDataReader r2 = c2.ExecuteReader();
+                if (r2.HasRows)
+                {
+                    connection.Close();
+
+                    connection.Open();
+
+
+                    SqlDataAdapter sda = new SqlDataAdapter("Select *from  StockTable where MedicalName = '" + Search.Text + "'", connection);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    ListViewItem lvi = new ListViewItem();
+                      listView1.Items.Clear();
+                    listView1.BeginUpdate();
+                  
+                    for (int row = 0; row < dt.Rows.Count; row++)
+                    {
+                        DataRow dr = dt.Rows[row];
+                        ListViewItem listitem = new ListViewItem(dr["ItemNo"].ToString());
+                        listitem.SubItems.Add(dr["MedicalName"].ToString());
+                        listitem.SubItems.Add(dr["GenericName"].ToString());
+                        listitem.SubItems.Add(dr["Size"].ToString());
+                        listitem.SubItems.Add(dr["AmountInStock"].ToString());
+                        listitem.SubItems.Add(dr["Price"].ToString());
+                        listitem.SubItems.Add(dr["ExpirationDate"].ToString());
+                        listitem.SubItems.Add(dr["Status"].ToString());
+                        listView1.Items.Add(listitem);
+                    }
+                    listView1.EndUpdate();
+                    connection.Close();
+                }else
+                {
+                    connection.Close();
+                    MessageBox.Show("No results Found");
+                }
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PaymentHistoryBtn_Click(object sender, EventArgs e)
+        {
+            Payment_History pay = new Payment_History();
+            pay.Show();
+            this.Hide();
+        }
+    } 
 }
