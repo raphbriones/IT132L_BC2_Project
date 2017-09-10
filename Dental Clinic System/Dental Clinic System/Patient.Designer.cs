@@ -49,10 +49,10 @@
             this.Occupation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +95,7 @@
             this.PaymentHistoryBtn.TabIndex = 13;
             this.PaymentHistoryBtn.Text = "Payment History";
             this.PaymentHistoryBtn.UseVisualStyleBackColor = true;
+            this.PaymentHistoryBtn.Click += new System.EventHandler(this.PaymentHistoryBtn_Click);
             // 
             // StockBtn
             // 
@@ -124,6 +125,7 @@
             this.UpdatePatientBtn.TabIndex = 10;
             this.UpdatePatientBtn.Text = "Update Patient";
             this.UpdatePatientBtn.UseVisualStyleBackColor = true;
+            this.UpdatePatientBtn.Click += new System.EventHandler(this.UpdatePatientBtn_Click);
             // 
             // monthCalendar1
             // 
@@ -140,6 +142,7 @@
             this.RemovePatientBtn.TabIndex = 9;
             this.RemovePatientBtn.Text = "Remove Patient";
             this.RemovePatientBtn.UseVisualStyleBackColor = true;
+            this.RemovePatientBtn.Click += new System.EventHandler(this.RemovePatientBtn_Click);
             // 
             // AddPatientBtn
             // 
@@ -149,6 +152,7 @@
             this.AddPatientBtn.TabIndex = 8;
             this.AddPatientBtn.Text = "Add Patient";
             this.AddPatientBtn.UseVisualStyleBackColor = true;
+            this.AddPatientBtn.Click += new System.EventHandler(this.AddPatientBtn_Click);
             // 
             // label4
             // 
@@ -178,6 +182,7 @@
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // PatientNo
             // 
@@ -223,29 +228,20 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(256, 1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(478, 72);
             this.panel2.TabIndex = 5;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // button1
+            // search
             // 
-            this.button1.BackgroundImage = global::Dental_Clinic_System.Properties.Resources.search1600;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(442, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 21);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(290, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
-            this.textBox1.TabIndex = 3;
+            this.search.Location = new System.Drawing.Point(290, 11);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(146, 20);
+            this.search.TabIndex = 3;
             // 
             // label1
             // 
@@ -264,6 +260,17 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Dental_Clinic_System.Properties.Resources.search1600;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(442, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 21);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Patient
             // 
@@ -304,7 +311,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox search;
         private System.Windows.Forms.ColumnHeader PatientNo;
         private System.Windows.Forms.ColumnHeader FirstName;
         private System.Windows.Forms.ColumnHeader MiddleName;

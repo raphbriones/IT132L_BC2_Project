@@ -92,7 +92,7 @@ namespace Dental_Clinic_System
 
             cmd.ExecuteNonQuery();
             connection.Close();
-
+            MessageBox.Show("Schedule Successfuly Updated!");
           
             Date.Text = null;
             Status.Text = null;

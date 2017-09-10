@@ -1,6 +1,6 @@
 ﻿namespace Dental_Clinic_System
 {
-    partial class Form1
+    partial class Payment_History
     {
         /// <summary>
         /// Required designer variable.
@@ -31,24 +31,25 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.PaymentHistoryBtn = new System.Windows.Forms.Button();
+            this.SchedBtn = new System.Windows.Forms.Button();
             this.StockBtn = new System.Windows.Forms.Button();
             this.PatientBtn = new System.Windows.Forms.Button();
-            this.UpdateSchedBtn = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.RemoveSchedBtn = new System.Windows.Forms.Button();
-            this.AddSchedBtn = new System.Windows.Forms.Button();
+            this.AddTransBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.PatientName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.date1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.time1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.status1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.modePay = new System.Windows.Forms.ComboBox();
             this.YearCmbBox = new System.Windows.Forms.ComboBox();
             this.DayCmbBox = new System.Windows.Forms.ComboBox();
             this.MonthCmbBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -59,18 +60,17 @@
             this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.PaymentHistoryBtn);
+            this.panel1.Controls.Add(this.SchedBtn);
             this.panel1.Controls.Add(this.StockBtn);
             this.panel1.Controls.Add(this.PatientBtn);
-            this.panel1.Controls.Add(this.UpdateSchedBtn);
             this.panel1.Controls.Add(this.monthCalendar1);
-            this.panel1.Controls.Add(this.RemoveSchedBtn);
-            this.panel1.Controls.Add(this.AddSchedBtn);
+            this.panel1.Controls.Add(this.AddTransBtn);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(249, 453);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label2
             // 
@@ -83,19 +83,19 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "label2";
             // 
-            // PaymentHistoryBtn
+            // SchedBtn
             // 
-            this.PaymentHistoryBtn.Location = new System.Drawing.Point(11, 210);
-            this.PaymentHistoryBtn.Name = "PaymentHistoryBtn";
-            this.PaymentHistoryBtn.Size = new System.Drawing.Size(221, 24);
-            this.PaymentHistoryBtn.TabIndex = 13;
-            this.PaymentHistoryBtn.Text = "Payment History";
-            this.PaymentHistoryBtn.UseVisualStyleBackColor = true;
-            this.PaymentHistoryBtn.Click += new System.EventHandler(this.PaymentHistoryBtn_Click);
+            this.SchedBtn.Location = new System.Drawing.Point(11, 90);
+            this.SchedBtn.Name = "SchedBtn";
+            this.SchedBtn.Size = new System.Drawing.Size(221, 24);
+            this.SchedBtn.TabIndex = 13;
+            this.SchedBtn.Text = "Schedule";
+            this.SchedBtn.UseVisualStyleBackColor = true;
+            this.SchedBtn.Click += new System.EventHandler(this.SchedBtn_Click);
             // 
             // StockBtn
             // 
-            this.StockBtn.Location = new System.Drawing.Point(11, 181);
+            this.StockBtn.Location = new System.Drawing.Point(11, 150);
             this.StockBtn.Name = "StockBtn";
             this.StockBtn.Size = new System.Drawing.Size(221, 24);
             this.StockBtn.TabIndex = 12;
@@ -105,23 +105,13 @@
             // 
             // PatientBtn
             // 
-            this.PatientBtn.Location = new System.Drawing.Point(11, 150);
+            this.PatientBtn.Location = new System.Drawing.Point(11, 120);
             this.PatientBtn.Name = "PatientBtn";
             this.PatientBtn.Size = new System.Drawing.Size(221, 24);
             this.PatientBtn.TabIndex = 11;
             this.PatientBtn.Text = "Patient";
             this.PatientBtn.UseVisualStyleBackColor = true;
             this.PatientBtn.Click += new System.EventHandler(this.PatientBtn_Click);
-            // 
-            // UpdateSchedBtn
-            // 
-            this.UpdateSchedBtn.Location = new System.Drawing.Point(11, 120);
-            this.UpdateSchedBtn.Name = "UpdateSchedBtn";
-            this.UpdateSchedBtn.Size = new System.Drawing.Size(221, 24);
-            this.UpdateSchedBtn.TabIndex = 10;
-            this.UpdateSchedBtn.Text = "Update Schedule";
-            this.UpdateSchedBtn.UseVisualStyleBackColor = true;
-            this.UpdateSchedBtn.Click += new System.EventHandler(this.UpdateSchedBtn_Click);
             // 
             // monthCalendar1
             // 
@@ -130,25 +120,15 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 2;
             // 
-            // RemoveSchedBtn
+            // AddTransBtn
             // 
-            this.RemoveSchedBtn.Location = new System.Drawing.Point(11, 90);
-            this.RemoveSchedBtn.Name = "RemoveSchedBtn";
-            this.RemoveSchedBtn.Size = new System.Drawing.Size(221, 24);
-            this.RemoveSchedBtn.TabIndex = 9;
-            this.RemoveSchedBtn.Text = "Remove Schedule";
-            this.RemoveSchedBtn.UseVisualStyleBackColor = true;
-            this.RemoveSchedBtn.Click += new System.EventHandler(this.RemoveSchedBtn_Click);
-            // 
-            // AddSchedBtn
-            // 
-            this.AddSchedBtn.Location = new System.Drawing.Point(11, 60);
-            this.AddSchedBtn.Name = "AddSchedBtn";
-            this.AddSchedBtn.Size = new System.Drawing.Size(221, 24);
-            this.AddSchedBtn.TabIndex = 8;
-            this.AddSchedBtn.Text = "Add Schedule";
-            this.AddSchedBtn.UseVisualStyleBackColor = true;
-            this.AddSchedBtn.Click += new System.EventHandler(this.AddSchedBtn_Click);
+            this.AddTransBtn.Location = new System.Drawing.Point(11, 60);
+            this.AddTransBtn.Name = "AddTransBtn";
+            this.AddTransBtn.Size = new System.Drawing.Size(221, 24);
+            this.AddTransBtn.TabIndex = 8;
+            this.AddTransBtn.Text = "Add Transaction";
+            this.AddTransBtn.UseVisualStyleBackColor = true;
+            this.AddTransBtn.Click += new System.EventHandler(this.AddTransBtn_Click);
             // 
             // label4
             // 
@@ -160,68 +140,31 @@
             this.label4.Size = new System.Drawing.Size(45, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "label4";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.PatientName,
-            this.date1,
-            this.time1,
-            this.status1});
-            this.listView1.Location = new System.Drawing.Point(256, 46);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(478, 405);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // PatientName
-            // 
-            this.PatientName.Text = "Patient Name";
-            this.PatientName.Width = 205;
-            // 
-            // date1
-            // 
-            this.date1.Text = "Date";
-            this.date1.Width = 80;
-            // 
-            // time1
-            // 
-            this.time1.Text = "Time";
-            this.time1.Width = 80;
-            // 
-            // status1
-            // 
-            this.status1.Text = "Status";
-            this.status1.Width = 111;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(11, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "SCHEDULE";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
+            this.panel2.Controls.Add(this.modePay);
             this.panel2.Controls.Add(this.YearCmbBox);
             this.panel2.Controls.Add(this.DayCmbBox);
             this.panel2.Controls.Add(this.MonthCmbBox);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(256, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(478, 72);
-            this.panel2.TabIndex = 3;
+            this.panel2.Size = new System.Drawing.Size(478, 86);
+            this.panel2.TabIndex = 4;
+            // 
+            // modePay
+            // 
+            this.modePay.FormattingEnabled = true;
+            this.modePay.Items.AddRange(new object[] {
+            "Cash",
+            "Check"});
+            this.modePay.Location = new System.Drawing.Point(289, 42);
+            this.modePay.Name = "modePay";
+            this.modePay.Size = new System.Drawing.Size(182, 21);
+            this.modePay.TabIndex = 6;
+            this.modePay.SelectedIndexChanged += new System.EventHandler(this.modePay_SelectedIndexChanged);
             // 
             // YearCmbBox
             // 
@@ -249,12 +192,12 @@
             this.YearCmbBox.Size = new System.Drawing.Size(71, 21);
             this.YearCmbBox.TabIndex = 5;
             this.YearCmbBox.SelectedIndexChanged += new System.EventHandler(this.YearCmbBox_SelectedIndexChanged);
+            this.YearCmbBox.TextUpdate += new System.EventHandler(this.YearCmbBox_TextUpdate);
             // 
             // DayCmbBox
             // 
             this.DayCmbBox.FormattingEnabled = true;
             this.DayCmbBox.Items.AddRange(new object[] {
-            "",
             "1",
             "2",
             "3",
@@ -291,6 +234,7 @@
             this.DayCmbBox.Size = new System.Drawing.Size(48, 21);
             this.DayCmbBox.TabIndex = 4;
             this.DayCmbBox.SelectedIndexChanged += new System.EventHandler(this.DayCmbBox_SelectedIndexChanged);
+            this.DayCmbBox.TextUpdate += new System.EventHandler(this.DayCmbBox_TextUpdate);
             // 
             // MonthCmbBox
             // 
@@ -314,25 +258,87 @@
             this.MonthCmbBox.Size = new System.Drawing.Size(51, 21);
             this.MonthCmbBox.TabIndex = 3;
             this.MonthCmbBox.SelectedIndexChanged += new System.EventHandler(this.MonthCmbBox_SelectedIndexChanged);
+            this.MonthCmbBox.TextUpdate += new System.EventHandler(this.MonthCmbBox_TextUpdate);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(11, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(189, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "PAYMENT HISTORY";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.listView1.Location = new System.Drawing.Point(256, 70);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(478, 384);
+            this.listView1.TabIndex = 5;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Patient Number";
+            this.columnHeader1.Width = 91;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Date";
+            this.columnHeader2.Width = 97;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Mode Of Payment";
+            this.columnHeader3.Width = 103;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Amount Payed";
+            this.columnHeader4.Width = 96;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Balance";
+            this.columnHeader5.Width = 86;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Status";
+            this.columnHeader6.Width = 172;
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Form1
+            // Payment_History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 458);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Location = new System.Drawing.Point(256, 1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Payment_History";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Payment_History";
+            this.Load += new System.EventHandler(this.Payment_History_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -344,26 +350,26 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button SchedBtn;
         private System.Windows.Forms.Button StockBtn;
         private System.Windows.Forms.Button PatientBtn;
-        private System.Windows.Forms.Button UpdateSchedBtn;
-        private System.Windows.Forms.Button RemoveSchedBtn;
-        private System.Windows.Forms.Button AddSchedBtn;
-        private System.Windows.Forms.ColumnHeader PatientName;
-        private System.Windows.Forms.ColumnHeader date1;
-        private System.Windows.Forms.ColumnHeader time1;
-        private System.Windows.Forms.ColumnHeader status1;
-        private System.Windows.Forms.Button PaymentHistoryBtn;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Button AddTransBtn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox YearCmbBox;
         private System.Windows.Forms.ComboBox DayCmbBox;
         private System.Windows.Forms.ComboBox MonthCmbBox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox modePay;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
-

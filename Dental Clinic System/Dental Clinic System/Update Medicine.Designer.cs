@@ -240,7 +240,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Update_Medicine";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update_Medicine";
             this.Load += new System.EventHandler(this.Update_Medicine_Load);
             this.ResumeLayout(false);

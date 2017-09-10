@@ -50,10 +50,28 @@ namespace Dental_Clinic_System
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
+
+            SqlCommand checker = new SqlCommand("select *from StockTable where  MedicalName= '" + MedicalName.Text+"' and GenericName ='" + GenericName.Text+ "' and  size ='"+Size.Text+"'", connection);
+            connection.Open();
+            SqlDataReader reader = checker.ExecuteReader();
+            if(reader.HasRows)
+            {
+                MessageBox.Show("Medicine Data Already in the stock!");
+                 MedicalName.Text = "";
+            GenericName.Text = "";
+            Size.Text = "";
+            Quantity.Text = "";
+            Price.Text = "";
+            Day.SelectedItem = null;
+            Month.SelectedItem = null;
+            Year.SelectedItem = null;
+            }else{
+                connection.Close();
             connection.Open();
             SqlCommand com = new SqlCommand("Insert into StockTable values('" + MedicalName.Text + "','" + GenericName.Text + "','" + Size.Text + "'," + Quantity.Text + "," + Price.Text + ",'" + Month.Text + "/" + Day.Text+ "/" + Year.Text + "','Fine')", connection);
             com.ExecuteNonQuery();
-            connection.Close();
+         
+       MessageBox.Show("Medicine Successfuly Added!");
 
             MedicalName.Text = "";
             GenericName.Text = "";
@@ -64,7 +82,8 @@ namespace Dental_Clinic_System
             Month.SelectedItem = null;
             Year.SelectedItem = null;
         }
-
+                 connection.Close();
+        }
         private void Add_Medicine_Load(object sender, EventArgs e)
         {
             confirmBtn.Enabled = false;
