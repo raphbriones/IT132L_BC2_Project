@@ -102,7 +102,7 @@ namespace Dental_Clinic_System
             com1.ExecuteNonQuery();
 
             connection.Close();
-
+            MessageBox.Show("Contact Info Successfully Edited!");
             View_Detailed_Patient back2 = new View_Detailed_Patient(Pnum);
             back2.Show();
             this.Hide();

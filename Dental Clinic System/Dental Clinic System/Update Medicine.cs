@@ -130,6 +130,7 @@ namespace Dental_Clinic_System
             com.ExecuteNonQuery();
 
             connection.Close();
+            MessageBox.Show(" Medicine Successfuly Updated!");
             ItemNo.SelectedItem = null;
             MedicalName.Text = "";
             GenericName.Text = "";

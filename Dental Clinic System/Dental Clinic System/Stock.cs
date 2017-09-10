@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 namespace Dental_Clinic_System
 {
     public partial class Stock : Form
@@ -24,16 +25,23 @@ namespace Dental_Clinic_System
             label4.Text = monthCalendar1.TodayDate.Month.ToString() + "/" + monthCalendar1.TodayDate.Day.ToString() + "/" + monthCalendar1.TodayDate.Year.ToString();
             timer1.Start();
 
+            connection.Open();
+        
+            SqlCommand co = new SqlCommand("Update StockTable Set Status ='Expired' where ExpirationDate ='"+monthCalendar1.TodayDate.Date+"'", connection);
+            co.ExecuteNonQuery();
+      
 
+            connection.Close();
 
             connection.Open();
-            //where Date = '" + MonthCmbBox.Text + "/" + DayCmbBox.Text + "/" + YearCmbBox.Text + "'
+          
 
             SqlDataAdapter sda = new SqlDataAdapter("select *from StockTable  ", connection);
             DataTable dt = new DataTable();
             sda.Fill(dt);
 
             ListViewItem lvi = new ListViewItem();
+            listView1.Items.Clear();
             listView1.BeginUpdate();
             for (int row = 0; row < dt.Rows.Count; row++)
             {
@@ -44,7 +52,7 @@ namespace Dental_Clinic_System
                 listitem.SubItems.Add(dr["Size"].ToString());
                 listitem.SubItems.Add(dr["AmountInStock"].ToString());
                 listitem.SubItems.Add(dr["Price"].ToString());
-                listitem.SubItems.Add(dr["ExpirationDate"].ToString());
+                listitem.SubItems.Add(Convert.ToDateTime(dr["ExpirationDate"]).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture));
                 listitem.SubItems.Add(dr["Status"].ToString());
                 listView1.Items.Add(listitem);
 
@@ -193,6 +201,45 @@ namespace Dental_Clinic_System
             Payment_History pay = new Payment_History();
             pay.Show();
             this.Hide();
+        }
+
+        private void Search_TextChanged(object sender, EventArgs e)
+        {
+            if(Search.Text=="")
+            {
+                connection.Open();
+
+
+                SqlDataAdapter sda = new SqlDataAdapter("select *from StockTable  ", connection);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                ListViewItem lvi = new ListViewItem();
+                listView1.Items.Clear();
+                listView1.BeginUpdate();
+                for (int row = 0; row < dt.Rows.Count; row++)
+                {
+                    DataRow dr = dt.Rows[row];
+                    ListViewItem listitem = new ListViewItem(dr["ItemNo"].ToString());
+                    listitem.SubItems.Add(dr["MedicalName"].ToString());
+                    listitem.SubItems.Add(dr["GenericName"].ToString());
+                    listitem.SubItems.Add(dr["Size"].ToString());
+                    listitem.SubItems.Add(dr["AmountInStock"].ToString());
+                    listitem.SubItems.Add(dr["Price"].ToString());
+                    listitem.SubItems.Add(Convert.ToDateTime(dr["ExpirationDate"]).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture));
+                    listitem.SubItems.Add(dr["Status"].ToString());
+                    listView1.Items.Add(listitem);
+
+
+                }
+                listView1.EndUpdate();
+
+
+
+
+
+                connection.Close();
+            }
         }
     } 
 }

@@ -286,6 +286,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Add_Medicine";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Medicine";
             this.Load += new System.EventHandler(this.Add_Medicine_Load);
             this.ResumeLayout(false);

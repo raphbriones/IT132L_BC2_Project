@@ -138,6 +138,8 @@ namespace Dental_Clinic_System
                 SqlCommand com = new SqlCommand("Insert Into PatientTable values('" + FirstName.Text + "','" + MiddleName.Text + "','" + LastName.Text + "','" + Month.Text + "/" + Day.Text + "/" + Year.Text + "'," + Age.Text + ",'" + Occupation.Text + "','" + Status.Text + "')", connection);
                 com.ExecuteNonQuery();
                 connection.Close();
+
+                MessageBox.Show("Patient Successfuly Added!");
                 connection.Open();
 
 

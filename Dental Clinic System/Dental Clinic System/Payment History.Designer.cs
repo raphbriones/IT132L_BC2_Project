@@ -38,19 +38,19 @@
             this.AddTransBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.modePay = new System.Windows.Forms.ComboBox();
             this.YearCmbBox = new System.Windows.Forms.ComboBox();
             this.DayCmbBox = new System.Windows.Forms.ComboBox();
             this.MonthCmbBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.modePay = new System.Windows.Forms.ComboBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -154,10 +154,23 @@
             this.panel2.Size = new System.Drawing.Size(478, 86);
             this.panel2.TabIndex = 4;
             // 
+            // modePay
+            // 
+            this.modePay.FormattingEnabled = true;
+            this.modePay.Items.AddRange(new object[] {
+            "Cash",
+            "Check"});
+            this.modePay.Location = new System.Drawing.Point(289, 42);
+            this.modePay.Name = "modePay";
+            this.modePay.Size = new System.Drawing.Size(182, 21);
+            this.modePay.TabIndex = 6;
+            this.modePay.SelectedIndexChanged += new System.EventHandler(this.modePay_SelectedIndexChanged);
+            // 
             // YearCmbBox
             // 
             this.YearCmbBox.FormattingEnabled = true;
             this.YearCmbBox.Items.AddRange(new object[] {
+            "",
             "2015",
             "2016",
             "2017",
@@ -179,6 +192,7 @@
             this.YearCmbBox.Size = new System.Drawing.Size(71, 21);
             this.YearCmbBox.TabIndex = 5;
             this.YearCmbBox.SelectedIndexChanged += new System.EventHandler(this.YearCmbBox_SelectedIndexChanged);
+            this.YearCmbBox.TextUpdate += new System.EventHandler(this.YearCmbBox_TextUpdate);
             // 
             // DayCmbBox
             // 
@@ -220,11 +234,13 @@
             this.DayCmbBox.Size = new System.Drawing.Size(48, 21);
             this.DayCmbBox.TabIndex = 4;
             this.DayCmbBox.SelectedIndexChanged += new System.EventHandler(this.DayCmbBox_SelectedIndexChanged);
+            this.DayCmbBox.TextUpdate += new System.EventHandler(this.DayCmbBox_TextUpdate);
             // 
             // MonthCmbBox
             // 
             this.MonthCmbBox.FormattingEnabled = true;
             this.MonthCmbBox.Items.AddRange(new object[] {
+            "",
             "1",
             "2",
             "3",
@@ -242,6 +258,7 @@
             this.MonthCmbBox.Size = new System.Drawing.Size(51, 21);
             this.MonthCmbBox.TabIndex = 3;
             this.MonthCmbBox.SelectedIndexChanged += new System.EventHandler(this.MonthCmbBox_SelectedIndexChanged);
+            this.MonthCmbBox.TextUpdate += new System.EventHandler(this.MonthCmbBox_TextUpdate);
             // 
             // label1
             // 
@@ -256,18 +273,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "PAYMENT HISTORY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // modePay
-            // 
-            this.modePay.FormattingEnabled = true;
-            this.modePay.Items.AddRange(new object[] {
-            "Cash",
-            "Check"});
-            this.modePay.Location = new System.Drawing.Point(289, 42);
-            this.modePay.Name = "modePay";
-            this.modePay.Size = new System.Drawing.Size(182, 21);
-            this.modePay.TabIndex = 6;
-            this.modePay.SelectedIndexChanged += new System.EventHandler(this.modePay_SelectedIndexChanged);
             // 
             // listView1
             // 
@@ -284,10 +289,6 @@
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // columnHeader1
             // 
@@ -319,6 +320,10 @@
             this.columnHeader6.Text = "Status";
             this.columnHeader6.Width = 172;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Payment_History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,7 +333,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Location = new System.Drawing.Point(256, 1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Payment_History";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payment_History";
             this.Load += new System.EventHandler(this.Payment_History_Load);
             this.panel1.ResumeLayout(false);

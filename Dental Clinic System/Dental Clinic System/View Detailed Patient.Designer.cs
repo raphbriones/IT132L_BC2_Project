@@ -50,23 +50,23 @@
             this.label7 = new System.Windows.Forms.Label();
             this.EditContactInfoBtn = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.Condition = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Treatment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tstatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.AddTreatment = new System.Windows.Forms.Button();
-            this.EditTreatment = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.AddTreatment = new System.Windows.Forms.Button();
+            this.EditTreatment = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -288,6 +288,25 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
+            // Condition
+            // 
+            this.Condition.Text = "Condition";
+            this.Condition.Width = 161;
+            // 
+            // Treatment
+            // 
+            this.Treatment.Text = "Treatment";
+            this.Treatment.Width = 198;
+            // 
+            // Tstatus
+            // 
+            this.Tstatus.Text = "Status";
+            this.Tstatus.Width = 72;
+            // 
+            // date
+            // 
+            this.date.Text = "Date";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Maroon;
@@ -296,6 +315,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(379, 51);
             this.panel1.TabIndex = 5;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(154, 5);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Treatment History";
             // 
             // listView2
             // 
@@ -312,6 +341,30 @@
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Date";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Mode Of Payment";
+            this.columnHeader2.Width = 104;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Amount Payed";
+            this.columnHeader3.Width = 83;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Balance";
+            this.columnHeader4.Width = 59;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Status";
+            this.columnHeader5.Width = 121;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
@@ -320,16 +373,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(379, 51);
             this.panel2.TabIndex = 7;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(154, 5);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Treatment History";
             // 
             // label11
             // 
@@ -340,21 +383,6 @@
             this.label11.Size = new System.Drawing.Size(83, 13);
             this.label11.TabIndex = 0;
             this.label11.Text = "Payment History";
-            // 
-            // Condition
-            // 
-            this.Condition.Text = "Condition";
-            this.Condition.Width = 161;
-            // 
-            // Treatment
-            // 
-            this.Treatment.Text = "Treatment";
-            this.Treatment.Width = 198;
-            // 
-            // Tstatus
-            // 
-            this.Tstatus.Text = "Status";
-            this.Tstatus.Width = 72;
             // 
             // AddTreatment
             // 
@@ -386,34 +414,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // date
-            // 
-            this.date.Text = "Date";
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Date";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Mode Of Payment";
-            this.columnHeader2.Width = 104;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Amount Payed";
-            this.columnHeader3.Width = 83;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Balance";
-            this.columnHeader4.Width = 59;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Status";
-            this.columnHeader5.Width = 121;
-            // 
             // View_Detailed_Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,7 +429,10 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "View_Detailed_Patient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View_Detailed_Patient";
             this.Load += new System.EventHandler(this.View_Detailed_Patient_Load);
             this.groupBox1.ResumeLayout(false);

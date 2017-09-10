@@ -127,7 +127,7 @@ namespace Dental_Clinic_System
 
             connection.Close();
 
-
+            MessageBox.Show("Patient Successfuly Removed!");
             PatientNumber.SelectedItem = null;
             PatientName.Text = "";
             birthday.Text = "";

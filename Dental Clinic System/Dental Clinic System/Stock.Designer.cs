@@ -49,10 +49,10 @@
             this.ExpirationDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -233,12 +233,24 @@
             this.panel2.Size = new System.Drawing.Size(478, 72);
             this.panel2.TabIndex = 4;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Dental_Clinic_System.Properties.Resources.search1600;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(445, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 23);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Search
             // 
             this.Search.Location = new System.Drawing.Point(295, 16);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(144, 20);
             this.Search.TabIndex = 3;
+            this.Search.TextChanged += new System.EventHandler(this.Search_TextChanged);
             // 
             // label1
             // 
@@ -257,17 +269,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::Dental_Clinic_System.Properties.Resources.search1600;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(445, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 23);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Stock
             // 

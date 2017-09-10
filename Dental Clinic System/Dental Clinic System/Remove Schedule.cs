@@ -90,7 +90,7 @@ namespace Dental_Clinic_System
             
             connection.Close();
 
-
+            MessageBox.Show("Schedule Successfuly Removed!");
             PatientName.Text = " ";
             Date.Text = " ";
             Time.Text = " ";

@@ -138,7 +138,10 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Edit_Treatment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit_Treatment";
             this.Load += new System.EventHandler(this.Edit_Treatment_Load);
             this.ResumeLayout(false);

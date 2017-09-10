@@ -129,6 +129,7 @@ namespace Dental_Clinic_System
             com.ExecuteNonQuery();
 
             connection.Close();
+            MessageBox.Show("Medicine successfuly Removed!");
             ItemNo.SelectedItem = null;
             MedicalName.Text = "";
             GenericName.Text = "";

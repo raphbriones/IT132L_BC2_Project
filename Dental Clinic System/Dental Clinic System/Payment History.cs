@@ -31,14 +31,12 @@ namespace Dental_Clinic_System
         {
             label4.Text = monthCalendar1.TodayDate.Month.ToString() + "/" + monthCalendar1.TodayDate.Day.ToString() + "/" + monthCalendar1.TodayDate.Year.ToString();
             timer1.Start();
-            MonthCmbBox.Text = monthCalendar1.TodayDate.Month.ToString();
-            DayCmbBox.Text = monthCalendar1.TodayDate.Day.ToString();
-            YearCmbBox.Text = monthCalendar1.TodayDate.Year.ToString();
+
             connection.Open();
         
 
 
-            SqlDataAdapter sda = new SqlDataAdapter("select *from PaymentTable where Date = '" + MonthCmbBox.Text + "/" + DayCmbBox.Text + "/" + YearCmbBox.Text + "' ", connection);
+            SqlDataAdapter sda = new SqlDataAdapter("select *from PaymentTable ", connection);
             DataTable dt = new DataTable();
             sda.Fill(dt);
 
@@ -464,6 +462,126 @@ namespace Dental_Clinic_System
             Add_Transaction add = new Add_Transaction();
             add.Show();
             this.Hide();
+        }
+
+        private void MonthCmbBox_TextUpdate(object sender, EventArgs e)
+        {
+            if(MonthCmbBox.Text=="" && DayCmbBox.Text == ""&&YearCmbBox.Text =="")
+            {
+                connection.Open();
+
+
+
+                SqlDataAdapter sda = new SqlDataAdapter("select *from PaymentTable ", connection);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                ListViewItem lvi0 = new ListViewItem();
+                listView1.Items.Clear();
+                listView1.BeginUpdate();
+                for (int row = 0; row < dt.Rows.Count; row++)
+                {
+                    DataRow dr0 = dt.Rows[row];
+                    ListViewItem listitem = new ListViewItem(dr0["PatientNo"].ToString());
+                    listitem.SubItems.Add(Convert.ToDateTime(dr0["Date"]).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture));
+                    listitem.SubItems.Add(dr0["ModeOfPayment"].ToString());
+                    listitem.SubItems.Add(dr0["AmountPayed"].ToString());
+                    listitem.SubItems.Add(dr0["Balance"].ToString());
+                    listitem.SubItems.Add(dr0["status"].ToString());
+
+                    listView1.Items.Add(listitem);
+
+
+                }
+                listView1.EndUpdate();
+
+
+
+
+
+                connection.Close();
+
+            }
+        }
+
+        private void DayCmbBox_TextUpdate(object sender, EventArgs e)
+        {
+            if (MonthCmbBox.Text == "" && DayCmbBox.Text == "" && YearCmbBox.Text == "")
+            {
+                connection.Open();
+
+
+
+                SqlDataAdapter sda = new SqlDataAdapter("select *from PaymentTable ", connection);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                ListViewItem lvi0 = new ListViewItem();
+                listView1.Items.Clear();
+                listView1.BeginUpdate();
+                for (int row = 0; row < dt.Rows.Count; row++)
+                {
+                    DataRow dr0 = dt.Rows[row];
+                    ListViewItem listitem = new ListViewItem(dr0["PatientNo"].ToString());
+                    listitem.SubItems.Add(Convert.ToDateTime(dr0["Date"]).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture));
+                    listitem.SubItems.Add(dr0["ModeOfPayment"].ToString());
+                    listitem.SubItems.Add(dr0["AmountPayed"].ToString());
+                    listitem.SubItems.Add(dr0["Balance"].ToString());
+                    listitem.SubItems.Add(dr0["status"].ToString());
+
+                    listView1.Items.Add(listitem);
+
+
+                }
+                listView1.EndUpdate();
+
+
+
+
+
+                connection.Close();
+
+            }
+        }
+
+        private void YearCmbBox_TextUpdate(object sender, EventArgs e)
+        {
+            if (MonthCmbBox.Text == "" && DayCmbBox.Text == "" && YearCmbBox.Text == "")
+            {
+                connection.Open();
+
+
+
+                SqlDataAdapter sda = new SqlDataAdapter("select *from PaymentTable ", connection);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                ListViewItem lvi0 = new ListViewItem();
+                listView1.Items.Clear();
+                listView1.BeginUpdate();
+                for (int row = 0; row < dt.Rows.Count; row++)
+                {
+                    DataRow dr0 = dt.Rows[row];
+                    ListViewItem listitem = new ListViewItem(dr0["PatientNo"].ToString());
+                    listitem.SubItems.Add(Convert.ToDateTime(dr0["Date"]).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture));
+                    listitem.SubItems.Add(dr0["ModeOfPayment"].ToString());
+                    listitem.SubItems.Add(dr0["AmountPayed"].ToString());
+                    listitem.SubItems.Add(dr0["Balance"].ToString());
+                    listitem.SubItems.Add(dr0["status"].ToString());
+
+                    listView1.Items.Add(listitem);
+
+
+                }
+                listView1.EndUpdate();
+
+
+
+
+
+                connection.Close();
+
+            }
         }
     }
 }

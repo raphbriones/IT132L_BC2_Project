@@ -108,6 +108,7 @@ namespace Dental_Clinic_System
                 com.ExecuteNonQuery();
 
                 connection.Close();
+                MessageBox.Show("Treatment Successfuly Inserted!");
                 View_Detailed_Patient back = new View_Detailed_Patient(pnum);
                 back.Show();
                 this.Hide();

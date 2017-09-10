@@ -75,7 +75,7 @@ namespace Dental_Clinic_System
                 cmd.ExecuteNonQuery();
 
                 connection.Close();
-
+                MessageBox.Show("Schedule Added Successfully");
                 PatientName.Clear();
                 Month.SelectedItem = null;
                 Day.SelectedItem = null;

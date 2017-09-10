@@ -227,6 +227,7 @@
             // 
             this.YearCmbBox.FormattingEnabled = true;
             this.YearCmbBox.Items.AddRange(new object[] {
+            "",
             "2015",
             "2016",
             "2017",
@@ -253,6 +254,7 @@
             // 
             this.DayCmbBox.FormattingEnabled = true;
             this.DayCmbBox.Items.AddRange(new object[] {
+            "",
             "1",
             "2",
             "3",
@@ -294,6 +296,7 @@
             // 
             this.MonthCmbBox.FormattingEnabled = true;
             this.MonthCmbBox.Items.AddRange(new object[] {
+            "",
             "1",
             "2",
             "3",

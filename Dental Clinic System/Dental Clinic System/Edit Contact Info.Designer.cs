@@ -155,7 +155,10 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Edit_Contact_Info";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit_Contact_Info";
             this.Load += new System.EventHandler(this.Edit_Contact_Info_Load);
             this.ResumeLayout(false);

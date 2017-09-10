@@ -110,7 +110,7 @@ namespace Dental_Clinic_System
             SqlCommand com = new SqlCommand("Insert Into PaymentTable values ('" + PatientNumber.Text + "','" + Month.Text + "/" + Day.Text + "/" + Year.Text + "','" + ModePay.Text + "'," + AmountPayed.Text + "," + Balance.Text + ",'" + Cstatus + "')", connection);
             com.ExecuteNonQuery();
 
-            MessageBox.Show("Transaction Succesful!");
+            MessageBox.Show("Transaction Succesfully Added!");
             Day.SelectedItem = null;
             Month.SelectedItem = null;
             Year.SelectedItem = null;

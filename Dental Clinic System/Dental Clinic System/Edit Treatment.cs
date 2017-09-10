@@ -58,6 +58,7 @@ namespace Dental_Clinic_System
 
             com.ExecuteNonQuery();
             connection.Close();
+            MessageBox.Show("Treatment Successfuly Updated!");
             View_Detailed_Patient back = new View_Detailed_Patient(Pnum);
             back.Show();
             this.Hide();
